@@ -34,12 +34,8 @@ canvas.addEventListener("click", e => {
 });
 
 activateBtn.addEventListener("click", () => {
-  if (hasDrawnInnerStar(playerLines)) {
-    ritualActivated = true;
-    console.log("✨ Ritual Activated by user ✨");
-  } else {
-    console.log("⚠️ Ritual cannot be activated — inner star incomplete");
-  }
+  ritualActivated = true;
+  console.log("✨ Ritual Activated by user ✨");
   redraw();
 });
 
