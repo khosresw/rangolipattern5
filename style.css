@@ -1,26 +1,21 @@
 body {
-  background-color: #000;
-  color: #ccc;
-  font-family: sans-serif;
+  background-color: #111;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
   margin: 0;
+  padding: 0;
+}
+
+.scroll {
   padding: 20px;
-}
-
-h1 {
-  color: #ffd700;
-  margin-bottom: 10px;
-}
-
-#instruction {
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.5;
+  background: linear-gradient(to right, #222, #333);
+  border-bottom: 2px solid #FFD700;
 }
 
 canvas {
-  background-color: #000;
-  border: 1px solid #444;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
+  border: 2px solid #FFD700;
+  background-color: #000;
 }
