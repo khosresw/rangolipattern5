@@ -1,6 +1,6 @@
 import { getDotByCoord, DOT_RADIUS } from './grid.js';
 
-export let showCoordinates = true;
+export let showCoordinates = false;
 
 export function drawDot(ctx, dot) {
   ctx.beginPath();
