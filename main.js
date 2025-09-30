@@ -42,12 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
     redraw();
   });
 
-  toggleCoordsBtn.addEventListener("click", () => {
-    drawModule.showCoordinates = !drawModule.showCoordinates;
-    toggleCoordsBtn.innerText = drawModule.showCoordinates ? "Hide Coordinates" : "Show Coordinates";
-    redraw();
-  });
-
+ toggleCoordsBtn.addEventListener("click", () => {
+  drawModule.showCoordinates = false; // 🧹 Always hide
+  toggleCoordsBtn.disabled = true;    // Optional: disable button after use
+  toggleCoordsBtn.innerText = "Coordinates Removed";
+  redraw();
+});
+  
   function redraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dotMatrix.forEach(row => row.forEach(dot => drawDot(ctx, dot)));
