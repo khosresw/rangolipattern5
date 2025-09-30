@@ -1,6 +1,6 @@
 import { buildGrid, dotMatrix } from './grid.js';
-import { drawDot, drawLine, drawShape } from './draw.js';
-import { outer_star, parallelograms, hexagons, hasDrawnInnerStar } from './ritual.js';
+import { drawDot, drawLine, drawShape, showCoordinates } from './draw.js';
+import { outer_star, parallelograms, hexagons } from './ritual.js';
 
 const canvas = document.getElementById("ritualCanvas");
 const ctx = canvas.getContext("2d");
@@ -35,7 +35,8 @@ canvas.addEventListener("click", e => {
 
 activateBtn.addEventListener("click", () => {
   ritualActivated = true;
-  console.log("✨ Ritual Activated by user ✨");
+  showCoordinates = false; // 🧹 Hide coordinates on activation
+  activateBtn.innerText = "Ritual Revealed";
   redraw();
 });
 
@@ -48,6 +49,7 @@ function redraw() {
     drawShape(ctx, outer_star, "#FFD700", 3);
     parallelograms.forEach(shape => drawShape(ctx, shape, "#00FFFF", 2));
     hexagons.forEach(shape => drawShape(ctx, shape, "#FFFFFF", 2));
+
     ctx.fillStyle = "#FFD700";
     ctx.font = "20px sans-serif";
     ctx.fillText("✨ Ritual Unlocked ✨", canvas.width / 2 - 80, 30);
