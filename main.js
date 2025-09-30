@@ -1,10 +1,12 @@
 import { buildGrid, dotMatrix } from './grid.js';
 import { drawDot, drawLine, drawShape } from './draw.js';
-import { outer_star, parallelograms, hexagons, hasDrawnInnerStar } from './ritual.js';
+import * as drawModule from './draw.js';
+import { outer_star, parallelograms, hexagons } from './ritual.js';
 
 const canvas = document.getElementById("ritualCanvas");
 const ctx = canvas.getContext("2d");
 const activateBtn = document.getElementById("activateBtn");
+const toggleCoordsBtn = document.getElementById("toggleCoordsBtn");
 
 let selectedDot = null;
 let playerLines = [];
@@ -35,7 +37,13 @@ canvas.addEventListener("click", e => {
 
 activateBtn.addEventListener("click", () => {
   ritualActivated = true;
-  console.log("✨ Ritual Activated by user ✨");
+  activateBtn.innerText = "Ritual Revealed";
+  redraw();
+});
+
+toggleCoordsBtn.addEventListener("click", () => {
+  drawModule.showCoordinates = !drawModule.showCoordinates;
+  toggleCoordsBtn.innerText = drawModule.showCoordinates ? "Hide Coordinates" : "Show Coordinates";
   redraw();
 });
 
