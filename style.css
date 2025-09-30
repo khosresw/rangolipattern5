@@ -1,0 +1,26 @@
+body {
+  background-color: #000;
+  color: #ccc;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+#instruction {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+canvas {
+  background-color: #000;
+  border: 1px solid #444;
+  display: block;
+  margin: 0 auto;
+}
