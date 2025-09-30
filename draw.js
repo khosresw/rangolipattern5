@@ -5,9 +5,9 @@ export function drawDot(ctx, dot) {
   ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2);
   ctx.fillStyle = "white";
   ctx.fill();
-  ctx.fillStyle = "#ccc";
+/*  ctx.fillStyle = "#ccc";
   ctx.font = "12px sans-serif";
-  ctx.fillText(`(${dot.col},${dot.row})`, dot.x + 6, dot.y - 12);
+  ctx.fillText(`(${dot.col},${dot.row})`, dot.x + 6, dot.y - 12);*/
 }
 
 export function drawLine(ctx, a, b, color = "#FFD700", width = 3) {
