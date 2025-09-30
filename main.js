@@ -3,7 +3,11 @@ import { drawDot, drawLine, drawShape } from './draw.js';
 import * as drawModule from './draw.js';
 import { outer_star, parallelograms, hexagons } from './ritual.js';
 
-
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("ritualCanvas");
+  const ctx = canvas.getContext("2d");
+  const activateBtn = document.getElementById("activateBtn");
+  const toggleCoordsBtn = document.getElementById("toggleCoordsBtn");
 
   let selectedDot = null;
   let playerLines = [];
@@ -38,7 +42,18 @@ import { outer_star, parallelograms, hexagons } from './ritual.js';
     redraw();
   });
 
+toggleCoordsBtn.addEventListener("click", () => {
+  // Manually set the flag to false every time
+  drawModule.showCoordinates = false;
 
+  // Optional: update button label to reflect state
+  toggleCoordsBtn.innerText = "Coordinates Hidden";
+
+  // Optional: keep button active for future use
+  // You can also re-enable coordinates later if needed
+
+  redraw();
+});
   function redraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dotMatrix.forEach(row => row.forEach(dot => drawDot(ctx, dot)));
