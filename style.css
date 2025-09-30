@@ -19,3 +19,13 @@ canvas {
   border: 2px solid #FFD700;
   background-color: #000;
 }
+
+button {
+  margin: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #222;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+  cursor: pointer;
+}
