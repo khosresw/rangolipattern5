@@ -1,13 +1,18 @@
-import { dotMatrix, getDotByCoord, DOT_RADIUS } from './grid.js';
+import { getDotByCoord, DOT_RADIUS } from './grid.js';
+
+export let showCoordinates = true;
 
 export function drawDot(ctx, dot) {
   ctx.beginPath();
   ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2);
   ctx.fillStyle = "white";
   ctx.fill();
-  ctx.fillStyle = "#ccc";
-  ctx.font = "12px sans-serif";
-  ctx.fillText(`(${dot.col},${dot.row})`, dot.x + 6, dot.y - 12);
+
+  if (showCoordinates) {
+    ctx.fillStyle = "#ccc";
+    ctx.font = "12px sans-serif";
+    ctx.fillText(`(${dot.col},${dot.row})`, dot.x + 6, dot.y - 12);
+  }
 }
 
 export function drawLine(ctx, a, b, color = "#FFD700", width = 3) {
