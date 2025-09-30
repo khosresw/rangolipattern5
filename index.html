@@ -1,32 +1,18 @@
-<div class="scroll">
-  <h1>✨ Ritual Grid Ceremony ✨</h1>
-  <p>Trace the inner star to unlock the rangoli.</p>
-  <button id="activateBtn">Inner Star Complete</button>
-
-  <div class="inner-star-scroll">
-    <h2>🌟 How to Unlock the Inner Star Glyph</h2>
-    <p>
-      The Inner Star lies at the heart of the grid—a sacred loop of thirteen points that must be traced in exact sequence.
-      Each point is a node of memory, and each line a thread of intention.
-    </p>
-    <ul>
-      <li>(4,5) → (3,4)</li>
-      <li>(3,4) → (4,4)</li>
-      <li>(4,4) → (4,3)</li>
-      <li>(4,3) → (5,4)</li>
-      <li>(5,4) → (6,4)</li>
-      <li>(6,4) → (6,5)</li>
-      <li>(6,5) → (6,6)</li>
-      <li>(6,6) → (5,6)</li>
-      <li>(5,6) → (4,7)</li>
-      <li>(4,7) → (4,6)</li>
-      <li>(4,6) → (3,6)</li>
-      <li>(3,6) → (4,5)</li>
-    </ul>
-    <p>
-      This loop must be completed without deviation. Once the final line returns to (4,5), the glyph awakens.
-      The grid will shimmer, and the central emblem will be revealed.
-      Click between dots to draw lines. Press <strong>R</strong> to reset the ritual.
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ritual Grid Ceremony</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll">
+    <h1>✨ Ritual Grid Ceremony ✨</h1>
+    <p>Trace the inner star to unlock the rangoli. </p>
+    <button id="activateBtn">Inner Star Complete</button>
   </div>
-</div>
+  <canvas id="ritualCanvas" width="800" height="600"></canvas>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
