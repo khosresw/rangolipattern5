@@ -41,10 +41,13 @@ activateBtn.addEventListener("click", () => {
   redraw();
 });
 
-toggleCoordsBtn.addEventListener("click", () => {
-  drawModule.showCoordinates = !drawModule.showCoordinates;
-  toggleCoordsBtn.innerText = drawModule.showCoordinates ? "Hide Coordinates" : "Show Coordinates";
-  redraw();
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleCoordsBtn = document.getElementById("toggleCoordsBtn");
+  toggleCoordsBtn.addEventListener("click", () => {
+    drawModule.showCoordinates = !drawModule.showCoordinates;
+    toggleCoordsBtn.innerText = drawModule.showCoordinates ? "Hide Coordinates" : "Show Coordinates";
+    redraw();
+  });
 });
 
 function redraw() {
